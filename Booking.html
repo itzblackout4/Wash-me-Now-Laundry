@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Pickup | Wash Me Now Laundry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans min-h-screen flex flex-col justify-between">
+
+    <nav class="bg-white shadow-sm">
+        <div class="max-w-4xl mx-auto px-4 py-4 flex justify-between items-center">
+            <a href="index.html" class="text-slate-500 hover:text-slate-900 flex items-center space-x-2 text-sm font-medium transition">
+                <i class="fa-solid fa-arrow-left"></i>
+                <span>Back to Home</span>
+            </a>
+            <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-soap text-blue-600 text-xl"></i>
+                <span class="text-lg font-bold tracking-tight text-slate-900">Wash Me Now</span>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-md w-full mx-auto px-4 py-12 flex-grow flex flex-col justify-center">
+        <div class="bg-white p-8 rounded-2xl shadow-sm border border-slate-100">
+            <div class="text-center mb-6">
+                <h1 class="text-2xl font-black text-slate-950 tracking-tight">Schedule Your Pickup</h1>
+                <p class="text-sm text-slate-500 mt-1">Fill out the details below and our team in Achimota will handle the rest.</p>
+            </div>
+
+            <form id="laundryForm" class="space-y-4">
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Full Name</label>
+                    <input type="text" required placeholder="John Doe" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 text-sm transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Phone Number (WhatsApp Preferred)</label>
+                    <input type="tel" required placeholder="050 XXX XXXX" class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 text-sm transition">
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Select Service Tier</label>
+                    <select class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 text-sm transition">
+                        <option>Wash & Iron (Normal)</option>
+                        <option>Premium Starch & Press</option>
+                        <option>Express 24-Hour Turnaround</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block text-xs font-semibold text-slate-500 uppercase tracking-wider mb-1">Pickup Address / Notes</label>
+                    <textarea rows="3" placeholder="Specify your house address or landmark in Accra..." class="w-full px-4 py-3 bg-slate-50 border border-slate-200 rounded-xl focus:outline-none focus:border-blue-500 text-sm transition resize-none"></textarea>
+                </div>
+                
+                <button type="submit" class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3.5 rounded-xl transition duration-300 shadow-md shadow-blue-500/10 mt-2">
+                    Confirm Pickup Request
+                </button>
+            </form>
+        </div>
+    </main>
+
+    <footer class="border-t border-slate-200 bg-white py-6 text-center text-xs text-slate-400">
+        <p>&copy; 2026 Wash Me Now Laundry Service.</p>
+    </footer>
+
+    <script>
+        document.getElementById('laundryForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Your pickup request has been successfully submitted! A coordinator will contact you shortly.');
+            window.location.href = 'index.html'; // Directs them smoothly back home after submission
+        });
+    </script>
+</body>
+</html>
